@@ -7,8 +7,9 @@
     <meta name="description" content="">
     <title>회원가입 | 마켓컬리</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/reset.css"> <!-- 초기회 -->
+    <link rel="stylesheet" href="./styles/var.css"> <!-- 변수생성 -->
+    <link rel="stylesheet" href="./styles/index.css"> <!-- 디자인1 -->
     <link rel="stylesheet" href="./styles/join.css">
     <script src="./scripts/join.js"></script>
 </head>
@@ -94,14 +95,15 @@
                     <dt>주소<span class="important">*</span></dt>
                     <dd>
                         <a href="#" class="user_address">주소 검색</a>
-                        <span>배송지에 따라 상품정보가 달라질수 있습니다.</span>
+                        <p>배송지에 따라 상품정보가 달라질수 있습니다.</p>
                     </dd>
                     <!-- ===============================================================================e:주소 -->
                     <dt>성별</dt>
                     <dd>
                         <input type="radio" name="user_gender" id="user_gender_man" value="user_gender_man">
                         <label for="user_gender_man">남자</label>
-                        <input type="radio" name="user_gender" id="user_gender_woman" value="user_gender_woman">
+                        <input type="radio" name="user_gender" id="user_gender_woman" value="user_gender_woman" checked>
+                        <!-- 같은 그룹(선택양식의 name) 기준으로 checked는 주 고객(페르소나)에 맞춰 기본선택상태 권장 -->
                         <label for="user_gender_woman">여자</label>
                         <input type="radio" name="user_gender" id="user_gender_none" value="user_gender_none">
                         <label for="user_gender_none">선택안함</label>
@@ -109,7 +111,11 @@
                     <!-- =================================================================================e:성별 -->
                     <dt>생년월일</dt>
                     <dd>
-
+                        <ul class="birthday">
+                            <li><input type="text" name="user_year" id="user_year" placeholder="YYYY" maxlength="4"></li>
+                            <li><input type="text" name="user_month" id="user_month" placeholder="MM" maxlength="2"></li>
+                            <li><input type="text" name="user_day" id="user_day" placeholder="DD" maxlength="2"></li>
+                        </ul>
                     </dd>
                     <!-- 생년월일 -->
                 </dl>
